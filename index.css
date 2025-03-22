@@ -3,17 +3,13 @@ nav {
     padding: 10px;
     text-align: center;
     position: fixed;
-    /* Make the navbar fixed */
     top: 0;
-    /* Position it at the top */
     left: 0;
     width: 100%;
-    /* Make it full width */
     z-index: 1000;
-    /* Ensure it stays on top of other elements */
+
 }
 
-/* Navbar links styling */
 nav a {
     color: white;
     margin: 0 15px;
@@ -21,7 +17,6 @@ nav a {
     font-size: 18px;
 }
 
-/* Navbar links hover effect */
 nav a:hover {
     text-decoration: underline;
 }
@@ -29,11 +24,10 @@ nav a:hover {
 
 
 
-/* Styling sections */
+
 section {
     padding: 60px;
     min-height: 100vh;
-    /* Ensures each section takes at least full height */
     text-align: center;
 }
 
@@ -41,25 +35,21 @@ section {
     display: flex;
     flex-direction: column;
     align-items: center;
-    /* Centers content horizontally */
     justify-content: center;
     min-height: 100vh;
-    /* Keep the home section at full height */
     padding: 60px;
     background-color: rgb(26, 27, 27);
 }
 
-/* Styling for the header with the website name */
 .home-header {
     text-align: center;
     width: 100%;
     margin-bottom: 10px;
-    /* Space between header and content */
+ 
 }
 
 .home-header h1 {
     font-size: 3rem;
-    /* Adjust the size as needed */
     color: #ffffff;
     font-family: 'Arial', sans-serif;
     font-weight: bold;
@@ -69,27 +59,23 @@ section {
     text-align: center;
     width: 100%;
     margin-bottom: 20px;
-    /* Space between header and content */
+
 }
 
 .typing-effect {
     font-size: 3rem;
-    /* Adjust the size as needed */
     color: #ffffff;
     font-family: 'Arial', sans-serif;
     font-weight: bold;
     display: inline-block;
     border-right: 4px solid #ffffff;
-    /* Creates the cursor effect */
     white-space: nowrap;
-    /* Prevents the text from wrapping */
     overflow: hidden;
-    /* Hides the text that is not visible yet */
+   
     width: 0;
     animation: typing 3s steps(12) 0.25s forwards;
 }
 
-/* Keyframes for typing effect */
 @keyframes typing {
     from {
         width: 0;
@@ -97,27 +83,26 @@ section {
 
     to {
         width: 12ch;
-        /* Total length of the text (number of characters in "GuitarKinbo") */
+        
     }
 }
 
-/* Keyframes for the blinking cursor */
+
 @keyframes blink-caret {
     50% {
         border-color: transparent;
     }
 }
 
-/* Container for text and image */
+
 .home-container {
     display: flex;
     justify-content: space-between;
     width: 100%;
     max-width: 1200px;
-    /* Max width for better responsiveness */
+   
 }
 
-/* Styling the text on the left side */
 .home-text {
     width: 50%;
     padding-right: 20px;
@@ -136,18 +121,86 @@ section {
     color: #eee6e6;
 }
 
-/* Styling the image on the right side */
+
 .home-image {
     width: 50%;
 }
 
 .home-image img {
     width: 85%;
-    /* Makes sure the image scales with the container */
     max-height: 550px;
-    /* Limits the height of the image */
     object-fit: cover;
-    /* Ensures the image covers the area without distorting */
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(63, 62, 62, 0.1);
+}
+#products {
+    padding: 60px;
+    background-color: rgb(38, 38, 39);
+    text-align: center;
+}
+
+#products h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #fff;
+}
+
+#products p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    color: #fff;
+}
+
+
+.product-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.product {
+    border: 1px solid #7a7878;
+    padding: 20px;
+    border-radius: 8px;
+    background-color: #575353;
+    text-align: center;
+    width: 100%;
+    max-width: 300px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+
+.product img {
+    width: 100%; 
+    height: 200px; 
+    object-fit: cover; 
+    border-radius: 8px;
+}
+
+
+.product h3 {
+    font-size: 1.5rem;
+    margin: 10px 0;
+}
+
+.product p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+}
+
+
+.product button {
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+
+.product button:hover {
+    background-color: #555;
 }
