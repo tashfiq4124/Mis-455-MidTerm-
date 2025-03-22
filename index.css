@@ -204,3 +204,105 @@ section {
 .product button:hover {
     background-color: #555;
 }
+#about {
+    padding: 60px;
+    background-color: rgb(133, 130, 132);
+    text-align: center;
+}
+
+#about h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#about p {
+    font-size: 1.2rem;
+    margin-bottom: 40px;
+    line-height: 1.6;
+}
+
+.reviews {
+    margin-top: 30px;
+    text-align: left;
+}
+
+.reviews h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.review {
+    background-color: #f9f9f9;
+    border-left: 5px solid #333;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.review p {
+    font-size: 1.1rem;
+    margin: 10px 0;
+}
+
+.review p:last-child {
+    font-style: italic;
+    color: #555;
+}
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+    width: 100%;
+}
+#contact {
+    padding: 60px;
+    background-color: rgb(133, 130, 132);
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+#contact p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+.contact-info {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    margin-top: 30px;
+}
+
+.contact-item {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+}
+
+.contact-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.contact-item p {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.contact-item a {
+    color: #333;
+    text-decoration: none;
+}
+
+.contact-item a:hover {
+    text-decoration: underline;
+}
