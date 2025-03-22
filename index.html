@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Guitar-Kinbo</title>
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
     <nav>
         <a href="#home">Home</a>
         <a href="#contact">Contact</a>
         <a href="#products">Shop</a>
         <a href="#about">About</a>
+        <a href="payment.html">Cart (<span id="cart-count">0</span>)</a>
     </nav>
     <section id="home">
         <div class="home-header">
@@ -20,9 +23,12 @@
         <div class="home-container">
             <div class="home-text">
                 <h2>Buy Guitars at the Lowest Prices!</h2>
-                <p>Welcome to our Guitar Shop! We offer a wide variety of guitars for all types of musicians, from beginners to experts. 
-                    Buy guitars from us and get the best deals in the market with top-quality instruments at the lowest prices. Whether 
-                    you're looking for acoustic, electric, or bass guitars, we have it all. Don't miss out on our special offers and deals!</p>
+                <p>Welcome to our Guitar Shop! We offer a wide variety of guitars for all types of musicians, from
+                    beginners to experts.
+                    Buy guitars from us and get the best deals in the market with top-quality instruments at the lowest
+                    prices. Whether
+                    you're looking for acoustic, electric, or bass guitars, we have it all. Don't miss out on our
+                    special offers and deals!</p>
             </div>
             <div class="home-image">
                 <img src="HomeGuitar.jpg" alt="Guitar Image">
@@ -31,81 +37,91 @@
     </section>
     <section id="about">
         <h2>About "Guitar-Kinbo"</h2>
-        <p>Welcome to Guitar-Kinbo! We are a passionate team dedicated to providing high-quality guitars at the most affordable prices. Our goal is to make sure that every musician, whether a beginner or a professional, can access the best instruments. With a wide range of guitars from renowned brands, we aim to provide our customers with a seamless and satisfying shopping experience. Join us in our mission to inspire creativity through music!</p>
-        
+        <p>Welcome to Guitar-Kinbo! We are a passionate team dedicated to providing high-quality guitars at the most
+            affordable prices. Our goal is to make sure that every musician, whether a beginner or a professional, can
+            access the best instruments. With a wide range of guitars from renowned brands, we aim to provide our
+            customers with a seamless and satisfying shopping experience. Join us in our mission to inspire creativity
+            through music!</p>
+
         <div class="reviews">
             <h3>What Our Customers Are Saying</h3>
-            
+
             <div class="review">
-                <p>"I bought an acoustic guitar from GuitarKinbo and I am extremely happy with my purchase. The guitar arrived in perfect condition, and the price was unbeatable! Highly recommended!"</p>
+                <p>"I bought an acoustic guitar from GuitarKinbo and I am extremely happy with my purchase. The guitar
+                    arrived in perfect condition, and the price was unbeatable! Highly recommended!"</p>
                 <p>- Tashfiq_Islam.</p>
             </div>
-            
+
             <div class="review">
-                <p>"The service at GuitarKinbo is fantastic. Their customer support was very helpful in assisting me to choose the right guitar. Fast shipping and great prices!"</p>
+                <p>"The service at GuitarKinbo is fantastic. Their customer support was very helpful in assisting me to
+                    choose the right guitar. Fast shipping and great prices!"</p>
                 <p>- J.M Smaron.</p>
             </div>
-            
+
             <div class="review">
-                <p>"I’ve been playing guitar for years, and the selection at GuitarKinbo is top-notch. I found exactly what I was looking for, and the quality is outstanding!"</p>
+                <p>"I’ve been playing guitar for years, and the selection at GuitarKinbo is top-notch. I found exactly
+                    what I was looking for, and the quality is outstanding!"</p>
                 <p>- Rimon Sadman.</p>
             </div>
         </div>
     </section>
     <section id="products">
         <h2>Our Products</h2>
-        <p>Here are our products. Browse through our collection of guitars at the best prices!</p>
         <div class="product-container">
-            <div class="product">
-                <img src="Guitar-1.jpg" alt="Guitar 1">
+            <div class="product" data-id="1" data-name="Acoustic Guitar" data-price="20000">
+                <img src="Guitar-1.jpg" alt="Acoustic Guitar">
                 <h3>Acoustic Guitar</h3>
                 <p>Price: TK. 20000</p>
-                <button>Add to Cart</button>
+                <button onclick="addToCart(1, 'Acoustic Guitar', 20000)">Add to Cart</button>
             </div>
-            <div class="product">
-                <img src="Guitar-2.jpg" alt="Guitar 4">
+
+            <div class="product" data-id="2" data-name="Classical Guitar" data-price="15000">
+                <img src="Guitar-2.jpg" alt="Classical Guitar">
                 <h3>Classical Guitar</h3>
                 <p>Price: TK. 15000</p>
-                <button>Add to Cart</button>
+                <button onclick="addToCart(2, 'Classical Guitar', 15000)">Add to Cart</button>
             </div>
-            
-            <div class="product">
-                <img src="Guitar-3.jpg" alt="Guitar 5">
+
+            <div class="product" data-id="3" data-name="Electric Bass Guitar" data-price="45000">
+                <img src="Guitar-3.jpg" alt="Electric Bass Guitar">
                 <h3>Electric Bass Guitar</h3>
                 <p>Price: TK. 45000</p>
-                <button>Add to Cart</button>
+                <button onclick="addToCart(3, 'Electric Bass Guitar', 45000)">Add to Cart</button>
             </div>
-            
-            <div class="product">
-                <img src="Guitar-4.jpg" alt="Guitar 7">
+
+            <div class="product" data-id="4" data-name="Resonator Guitar" data-price="60000">
+                <img src="Guitar-4.jpg" alt="Resonator Guitar">
                 <h3>Resonator Guitar</h3>
                 <p>Price: TK. 60000</p>
-                <button>Add to Cart</button>
+                <button onclick="addToCart(4, 'Resonator Guitar', 60000)">Add to Cart</button>
             </div>
-    
-            <div class="product">
-                <img src="Guitar-5.jpg" alt="Guitar 9">
-                <h3>Mini Guitar</h3>
-                <p>Price: TK. 10000</p>
-                <button>Add to Cart</button>
+
+            <div class="product" data-id="5" data-name="Hollow Body Guitar" data-price="55000">
+                <img src="Guitar-5.jpg" alt="Hollow Body Guitar">
+                <h3>Hollow Body Guitar</h3>
+                <p>Price: TK. 55000</p>
+                <button onclick="addToCart(5, 'Hollow Body Guitar', 55000)">Add to Cart</button>
             </div>
-            <div class="product" id="product-10">
-                <img src="Guitar-6.jpg" alt="Guitar 10">
-                <h3>Jazz Guitar</h3>
-                <p>Price: TK. 70000</p>
-                <button>Add to Cart</button>
+
+            <div class="product" data-id="6" data-name="7-String Guitar" data-price="50000">
+                <img src="Guitar-6.jpg" alt="7-String Guitar">
+                <h3>7-String Guitar</h3>
+                <p>Price: TK. 50000</p>
+                <button onclick="addToCart(6, '7-String Guitar', 50000)">Add to Cart</button>
             </div>
-            <div class="product" id="product-8">
-                <img src="Guitar-7.jpg" alt="Guitar 8">
-                <h3>Travel Guitar</h3>
-                <p>Price: TK. 13000</p>
-                <button>Add to Cart</button>
+
+            <div class="product" data-id="7" data-name="12-String Guitar" data-price="35000">
+                <img src="Guitar-7.jpg" alt="12-String Guitar">
+                <h3>12-String Guitar</h3>
+                <p>Price: TK. 35000</p>
+                <button onclick="addToCart(7, '12-String Guitar', 35000)">Add to Cart</button>
             </div>
-            <div class="product" id="product-10">
-                <img src="Guitar-8.jpg" alt="Guitar 10">
-                <h3>Ukalelu</h3>
-                <p>Price: TK. 8000</p>
-                <button>Add to Cart</button>
+
+            <div class="product" data-id="8" data-name="Fretless Guitar" data-price="40000">
+                <img src="Guitar-8.jpg" alt="Fretless Guitar">
+                <h3>Fretless Guitar</h3>
+                <p>Price: TK. 40000</p>
+                <button onclick="addToCart(8, 'Fretless Guitar', 40000)">Add to Cart</button>
             </div>
         </div>
     </section>
@@ -117,17 +133,18 @@
                 <h3>Our Office</h3>
                 <p>Sector-11, Music City, Uttara-Dhaka</p>
             </div>
-            
+
             <div class="contact-item">
                 <h3>Email Us</h3>
                 <p>Email: <a href="mailto:support@guitarkinbo.com">support@guitarkinbo.com</a></p>
             </div>
-            
+
             <div class="contact-item">
                 <h3>Follow Us</h3>
-                <p>Facebook: <a href="https://www.facebook.com/GuitarKinbo" target="_blank">GuitarKinbo on Facebook</a></p>
+                <p>Facebook: <a href="https://www.facebook.com/GuitarKinbo" target="_blank">GuitarKinbo on Facebook</a>
+                </p>
             </div>
-            
+
             <div class="contact-item">
                 <h3>Hotline</h3>
                 <p>Phone: +880 1234567895</p>
@@ -143,4 +160,5 @@
 
 
 </body>
+
 </html>

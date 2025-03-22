@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <main>
+        <section class="payment-container">
+            <!-- Left Section: Cart Details -->
+            <section class="left">
+                <h2>Your Cart</h2>
+                <div id="cart-details"></div>
+                <div id="total-price"></div>
+            </section>
+
+            <!-- Right Section: Payment Methods -->
+            <section class="right">
+                <h2>Payment Methods</h2>
+                <form id="payment-form">
+                    <label>
+                        <input type="radio" name="payment-method" value="bkash">
+                        <span>Bkash</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="payment-method" value="nagad">
+                        <span>Nagad</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="payment-method" value="card">
+                        <span>Credit/Debit Card</span>
+                    </label>
+                    <label>
+                        <input type="radio" name="payment-method" value="cod">
+                        <span>Cash on Delivery</span>
+                    </label>
+                    <button type="button" onclick="makePayment()">Make Payment</button>
+                </form>
+            </section>
+        </section>
+    </main>
+    <script src="cart.js"></script>
+</body>
+</html>
